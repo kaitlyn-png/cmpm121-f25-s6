@@ -1,5 +1,54 @@
-.icon {
-  width: 64px;
-  vertical-align: top;
-  border: 1px solid salmon;
+:root{
+  --bg:#fbfbfd;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#0b69ff;
+  --gap:12px;
 }
+*{box-sizing:border-box}
+html,body,#app{height:100%}
+body{
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin:0;
+  background:linear-gradient(180deg,#f6f8ff 0%,var(--bg) 100%);
+  color:#111827;
+  padding:24px;
+}
+.app{max-width:980px;margin:0 auto}
+.header h1{margin:0;font-size:1.6rem}
+.subtitle{margin:4px 0 18px;color:var(--muted)}
+
+.controls{display:flex;gap:var(--gap);align-items:center;flex-wrap:wrap}
+.date-nav{display:flex;gap:8px;align-items:center}
+.date-nav button{padding:6px 10px;border-radius:6px;border:1px solid #e5e7eb;background:var(--card);cursor:pointer}
+.date-nav input[type="date"]{padding:6px;border-radius:6px;border:1px solid #e5e7eb}
+
+.entry-form{display:flex;flex:1;gap:8px}
+.entry-form input{flex:1;padding:10px;border-radius:8px;border:1px solid #e6e9ef}
+.entry-form button{padding:10px 14px;background:var(--accent);color:white;border:none;border-radius:8px;cursor:pointer}
+
+.content{display:flex;gap:18px;margin-top:18px}
+.day-list{width:200px}
+.main-view{flex:1;background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 16px rgba(11,105,255,0.06)}
+
+#entries{list-style:none;padding:0;margin:8px 0}
+#entries li{display:flex;justify-content:space-between;align-items:center;padding:10px;border-radius:8px;border:1px solid #f1f5f9;margin-bottom:8px;background:#fff}
+.entry-text{flex:1;margin-right:12px}
+.entry-meta{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:0.95rem}
+.entry-meta .del{padding:6px 8px;border-radius:6px;border:1px solid #fee2e2;background:#fff;color:#b91c1c;cursor:pointer}
+.empty{color:var(--muted)}
+
+.week-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:12px}
+.day-card{padding:8px;border-radius:8px;border:1px solid #eef2ff;background:#fff;cursor:pointer}
+.day-card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.day-card .count{background:#eef2ff;padding:2px 6px;border-radius:6px;color:var(--accent);font-weight:600}
+.mini-list{list-style:none;padding:0;margin:0;font-size:0.9rem;color:#374151}
+.mini-list li{margin-bottom:6px}
+.more{font-size:0.85rem;color:var(--muted);margin-top:6px}
+.no-items{color:var(--muted);text-align:center}
+
+@media (max-width:720px){
+  .content{flex-direction:column}
+  .day-list{width:100%}
+}
+

@@ -1,3 +1,22 @@
-# CMPM 121 D1 Project
+# CMPM 121 S6 Project
 
-This is the starting point for your CMPM 121 D1 project. The goal of this project is to create a simple web application using TypeScript, Vite, and modern web development practices. Students should make sure to remove _this_ content from their README.md file and replace it with their own project documentation.
+This section activity is experimenting with agentic coding tools.
+
+## Food Diary App
+
+A small client-side food diary web app was added. It lets you quickly add what you ate, stores entries in your browser (localStorage), and shows daily and weekly summaries.
+
+How to run locally:
+
+```bash
+deno task dev
+```
+
+Open the dev server shown by the task (Vite) in your browser. Entries are saved only in your browser's local storage.
+
+Files of interest:
+
+- `src/main.ts` — app UI and logic
+- `src/style.css` — app styles
+
+
