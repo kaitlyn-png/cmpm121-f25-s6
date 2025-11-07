@@ -18,5 +18,3 @@ Files of interest:
 
 - `src/main.ts` — app UI and logic
 - `src/style.css` — app styles
-
-
